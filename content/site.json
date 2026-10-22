@@ -1,0 +1,337 @@
+{
+  "meta": {
+    "title": "Utkarsh Tiwari - AI systems & quantum research",
+    "description": "Final year Electronics and Computer Science student and HPC-Quantum Computing Research Fellow at C-DAC. Work in retrieval, local voice AI, and hybrid quantum-classical computing."
+  },
+  "ui": {
+    "skip": "Skip to content",
+    "navigation": "Main navigation",
+    "previewLabel": "Research / Engineering",
+    "placeholder": "Utkarsh Tiwari",
+    "close": "Close preview",
+    "open": "Preview",
+    "index": "Index",
+    "back": "Back to top",
+    "statusLabel": "Status",
+    "cv": ""
+  },
+  "header": {
+    "name": "Utkarsh Tiwari",
+    "links": [
+      {
+        "label": "Work",
+        "href": "#work"
+      },
+      {
+        "label": "Experience",
+        "href": "#experience"
+      },
+      {
+        "label": "Research",
+        "href": "#research"
+      },
+      {
+        "label": "Now",
+        "href": "#now"
+      },
+      {
+        "label": "CV",
+        "href": "#cv"
+      },
+      {
+        "label": "Contact",
+        "href": "#contact"
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "AI / NLP / Information retrieval / Quantum computing",
+    "lines": [
+      "Retrieval, NLP and AI systems.",
+      "Quantum machine learning research."
+    ],
+    "description": "Final year B.Tech student working on retrieval, evaluation, and local AI systems, and a research fellow in hybrid quantum classical computing at C-DAC.",
+    "location": "Panvel, Navi Mumbai, India",
+    "availability": "",
+    "footnote": "Electronics and Computer Science / Class of 2027",
+    "scroll": "Explore the work"
+  },
+  "work": {
+    "number": "01",
+    "title": "Selected work",
+    "intro": "Retrieval evaluation, local voice AI, and a team research project in mineral anomaly detection.",
+    "previewNote": "",
+    "items": [
+      {
+        "id": "litmus",
+        "number": "01",
+        "title": "Litmus",
+        "description": "A RAG workbench that compares retrieval strategies and checks every citation against the retrieved evidence.",
+        "stack": "Python / FastAPI / React / TypeScript / Qdrant / Docker",
+        "status": "In progress",
+        "preview": "RAG retrieval and citation evaluation",
+        "kind": "details",
+        "remaining": "What remains: measure dense, hybrid, and reranked retrieval, calibrate the judge against human ratings, and repair the interactive comparison view.",
+        "details": [],
+        "bullets": [
+          "Built a private document question answering system that runs dense and BM25 retrieval concurrently, fuses results with Reciprocal Rank Fusion, and reranks with a cross encoder, with stage level diagnostics and visible degradation instead of silent fallback.",
+          "Implemented citation safe generation that treats model output as untrusted: it validates source handles, strips invalid citations, and refuses answers with no valid support.",
+          "Designed an evaluation harness that separates deterministic retrieval metrics from schema validated LLM judging, versions the rubric, and records failed examples explicitly.",
+          "Added configuration aware regression checks that compare only like for like runs and skip metrics without enough evidence, and enforced tenant and group access scopes inside retrieval and graph traversal.",
+          "Measured sparse BM25 retrieval at Recall@5 of 0.945 over 47 questions on my own evaluation set."
+        ],
+        "links": [
+          {
+            "label": "GitHub",
+            "href": "https://github.com/Utkarsh4412/Litmus"
+          }
+        ]
+      },
+      {
+        "id": "vaak",
+        "number": "02",
+        "title": "vaak",
+        "description": "A local multilingual voice AI agent that runs entirely on the user's machine, with streaming speech and interruption handling.",
+        "stack": "Python / FastRTC / FastAPI / Ollama / Faster-Whisper / Kokoro",
+        "status": "In progress",
+        "preview": "Local multilingual voice AI agent",
+        "kind": "details",
+        "remaining": "What remains: live end to end latency measurements with real speech, text to speech, and language models running together, spoken language identification from audio, and a decision on native Marathi speech and GPU acceleration.",
+        "details": [],
+        "bullets": [
+          "Engineered a streaming speech pipeline using punctuation based sentence chunking and token generators to start synthesized audio before the language model finishes, and to halt synthesis when the caller interrupts.",
+          "Architected a multi session WebRTC audio handler using prototype cloning and nonblocking semaphores to isolate conversational state per connection and reject excess callers with a busy tone.",
+          "Designed conversational memory with a rolling queue and periodic language model summarization, with a deterministic fallback when summarization fails.",
+          "Built a dual model transcription stack, Moonshine for English and Faster Whisper for Hindi and other languages, with audio normalization, downmixing, and resampling to 16 kHz.",
+          "Containerized the stack with a multi stage Docker build, Bearer token authentication, separate liveness and readiness probes, and a shutdown hook that drains in flight turns for up to 5 seconds.",
+          "Measured standalone llama3.2:1b at 62.4 ms time to first token and 38.4 tokens per second."
+        ],
+        "links": [
+          {
+            "label": "GitHub",
+            "href": "https://github.com/Utkarsh4412/vaak"
+          }
+        ]
+      },
+      {
+        "id": "terraq",
+        "number": "03",
+        "title": "TerraQ",
+        "description": "Our team’s CybraneX research project showcases a hybrid quantum-classical solution for lithium and vanadium anomaly detection.",
+        "stack": "NASA EO-1 Hyperion / Python / PennyLane / 6-qubit quantum autoencoder",
+        "status": "Research",
+        "preview": "Team research / Mineral anomaly detection",
+        "kind": "details",
+        "remaining": "My role: backend and dataset work.",
+        "details": [
+          "Our team built TerraQ to showcase the solution and problem statement from our CybraneX research: a hybrid quantum-classical pipeline for lithium and vanadium anomaly detection using NASA EO-1 Hyperion hyperspectral data and a 6-qubit quantum autoencoder.",
+          "I worked on the backend and datasets.",
+          "The pipeline reached an AUC of 0.77 on the NASA dataset and 0.82 on the Sentinel dataset."
+        ],
+        "links": [
+          {
+            "label": "Live",
+            "href": "https://terra-q-seven.vercel.app/"
+          }
+        ]
+      }
+    ]
+  },
+  "experience": {
+    "number": "02",
+    "title": "Experience",
+    "intro": "Research, applied engineering, and confidential client work.",
+    "items": [
+      {
+        "role": "HPC-Quantum Computing Research Fellow",
+        "organization": "C-DAC",
+        "dates": "July 2026 to present",
+        "location": "Pune",
+        "description": "Leading research on DFT in active space embedding with VQE for hybrid HPC quantum molecular simulation. Migrated a Qiskit pipeline to Quantinuum through pytket, resolving operator mapping and qubit ordering incompatibilities. Work spans IBM, Quantinuum, and AWS Braket, with HPC cluster access. Exploring how noise affects VQE results using IBM noise models, the AWS Braket DM1 density matrix simulator, and Quantinuum noise models."
+      },
+      {
+        "role": "Quantum Machine Learning Research Intern",
+        "organization": "CybraneX Pvt. Ltd.",
+        "dates": "October 2025 to June 2026",
+        "location": "Remote",
+        "description": "Led a team building a hybrid quantum classical pipeline for lithium and vanadium anomaly detection using NASA EO-1 Hyperion and Sentinel data, including a 6 qubit quantum autoencoder, reaching an AUC of 0.77 on the NASA dataset and 0.82 on the Sentinel dataset. I worked on the backend and datasets.",
+        "links": [
+          {
+            "label": "TerraQ Live",
+            "href": "https://terra-q-seven.vercel.app/"
+          }
+        ]
+      },
+      {
+        "role": "Research Intern (NLP)",
+        "organization": "NLIP Lab, IIT Hyderabad",
+        "dates": "January to June 2026",
+        "location": "Sangareddy",
+        "description": "Evaluated culturally adapted mathematical content for quality, language, cultural relevance, social context, realism, and coherence. Built an academic-paper retrieval pipeline using RAG, ChromaDB, Elasticsearch, and Sentence Transformers. Used Docling and PostgreSQL for document parsing and structured storage, implemented citation graph embeddings, and evaluated hybrid dense and sparse retrieval."
+      },
+      {
+        "role": "AI/ML Intern",
+        "organization": "Aryahs World Infotech",
+        "dates": "December 2025 to January 2026",
+        "location": "Navi Mumbai",
+        "description": "Developed WhatsApp automation with job scheduling and privacy controls for the marketing team, an ML-based symptom classifier, and context-aware email generation. Contributed product features using Python, Flask, MySQL, and JavaScript, with dataset work, testing, and Agile sprint collaboration."
+      },
+      {
+        "role": "Freelance",
+        "organization": "Confidential clients under NDA",
+        "dates": "",
+        "location": "",
+        "description": "Production websites and two Android apps, deployed under NDA. One is still being scaled."
+      }
+    ]
+  },
+  "research": {
+    "number": "03",
+    "title": "Research",
+    "intro": "Current research and paper presentation work.",
+    "items": [
+      {
+        "name": "TerraQ",
+        "label": "Research output",
+        "description": "Our team built TerraQ to showcase the CybraneX research solution and problem statement.",
+        "status": "Research",
+        "links": [
+          {
+            "label": "Live",
+            "href": "https://terra-q-seven.vercel.app/"
+          }
+        ]
+      },
+      {
+        "name": "E2 Calonics 25",
+        "label": "Paper presentation selection",
+        "description": "Selected for paper presentation on a machine-learning approach to irrigation optimization using environmental parameters.",
+        "status": "Research"
+      },
+      {
+        "name": "Paper in preparation",
+        "label": "",
+        "description": "",
+        "status": "In preparation"
+      }
+    ]
+  },
+  "education": {
+    "number": "04",
+    "title": "Education",
+    "intro": "Formal study and certifications.",
+    "degree": "B.Tech in Electronics and Computer Science",
+    "institution": "Shah and Anchor Kutchhi Engineering College",
+    "location": "Mumbai",
+    "dates": "September 2023 to 2027 expected",
+    "cgpa": "CGPA 8.17 out of 10",
+    "certificationsLabel": "Certifications",
+    "certifications": [
+      "Linux Essentials (Cisco Networking Academy)",
+      "Embedded System Developer (AICTE Virtual Internship, Eduskills Foundation)"
+    ]
+  },
+  "achievements": {
+    "number": "05",
+    "title": "Achievements",
+    "intro": "Hackathon outcomes, paper selection, and leadership.",
+    "items": [
+      {
+        "name": "Innovate a thon, IIT (ISM) Dhanbad, Concetto 25",
+        "description": "Finalist with Reloop, an AI driven circular economy platform."
+      },
+      {
+        "name": "HackWithUttarPradesh 25",
+        "description": "Finalist with an IoT and ML smart irrigation system."
+      },
+      {
+        "name": "HackSetu 1.0, Amity University Gwalior",
+        "description": "Grand finale with an AI and IoT irrigation prototype using real time sensor data."
+      },
+      {
+        "name": "E2 Calonics 25",
+        "description": "Paper presentation selection."
+      },
+      {
+        "name": "ISRC",
+        "description": "Led 12 campus ambassadors."
+      }
+    ]
+  },
+  "skills": {
+    "number": "06",
+    "title": "Skills",
+    "intro": "Tools and methods used across research and engineering.",
+    "items": [
+      {
+        "name": "Languages",
+        "description": "Python, C, C++, JavaScript, TypeScript."
+      },
+      {
+        "name": "AI, ML & retrieval",
+        "description": "Machine learning, NLP, information retrieval, RAG, AI evaluation, model evaluation, Sentence Transformers, TensorFlow, Keras, scikit-learn, OpenCV, Hugging Face, Ollama, Moonshine, Faster-Whisper, Kokoro."
+      },
+      {
+        "name": "Data & search",
+        "description": "NumPy, Pandas, Matplotlib, data preprocessing, Docling, MySQL, PostgreSQL, MongoDB, ChromaDB, Elasticsearch, Qdrant."
+      },
+      {
+        "name": "Web & tools",
+        "description": "FastAPI, Flask, Node.js, React.js (JSX), FastRTC, Gradio, WebRTC, Docker, Git, VS Code, XAMPP."
+      },
+      {
+        "name": "Quantum computing",
+        "description": "Qiskit, pytket, PennyLane; VQE, DFT-in-active-space embedding, and hybrid quantum-classical workflows."
+      }
+    ]
+  },
+  "now": {
+    "number": "07",
+    "title": "Now",
+    "intro": "Current research and projects still in development.",
+    "hint": "Scroll to follow the work",
+    "previous": "Previous item",
+    "next": "Next item",
+    "position": "Current item",
+    "items": [
+      {
+        "title": "DFT embedding with VQE",
+        "description": "At C-DAC, integrating classical DFT with quantum solvers through active-space embedding for hybrid HPC-quantum molecular simulation.",
+        "status": "In progress",
+        "remaining": ""
+      },
+      {
+        "title": "Litmus",
+        "description": "Developing the RAG evaluation workbench across classic, graph, and agentic strategies, with citation validation and configuration-aware comparisons.",
+        "status": "In progress",
+        "remaining": "What remains: measure dense, hybrid, and reranked retrieval, calibrate the judge against human ratings, and repair the interactive comparison view."
+      },
+      {
+        "title": "vaak",
+        "description": "Continuing work on local multilingual voice conversations, with streaming audio, session isolation, and interruption handling.",
+        "status": "In progress",
+        "remaining": "What remains: live end to end latency measurements with real speech, text to speech, and language models running together, spoken language identification from audio, and a decision on native Marathi speech and GPU acceleration."
+      }
+    ]
+  },
+  "inspiration": {
+    "number": "08",
+    "title": "Inspiration",
+    "intro": "",
+    "items": []
+  },
+  "footer": {
+    "number": "08",
+    "title": "Start a conversation.",
+    "email": "utkarshtiwari4412@gmail.com",
+    "social": "LinkedIn",
+    "note": "Panvel, Navi Mumbai, India",
+    "wordmark": "UTKARSH TIWARI",
+    "wordmarkLabel": "Utkarsh Sarvjeet Tiwari",
+    "copyright": "© 2026 Utkarsh Tiwari",
+    "socialHref": "https://www.linkedin.com/in/utkarsh-tiwari-45813728b/",
+    "github": "GitHub",
+    "githubHref": "https://github.com/Utkarsh4412",
+    "cvHref": ""
+  }
+}
