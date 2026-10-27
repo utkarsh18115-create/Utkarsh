@@ -17,10 +17,13 @@ Open http://localhost:3000. For a production check:
 npm run lint
 npm run typecheck
 npm run build
-npm start
 ```
 
-The build fails if the generated home page contains a visible placeholder marker.
+The static site is generated in `out/`. The build fails if its home page contains a visible placeholder marker.
+
+## Deploy
+
+The GitHub Pages workflow builds and publishes `out/` on each push to `main`. In this repository's **Settings → Pages**, set **Source** to **GitHub Actions**. The workflow preserves the configured `utkarshai.me` custom domain.
 
 ## Page
 

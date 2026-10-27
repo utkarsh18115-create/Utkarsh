@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-const output = join(process.cwd(), '.next', 'server', 'app', 'index.html');
+const output = join(process.cwd(), 'out', 'index.html');
 let html;
 try {
   html = readFileSync(output, 'utf8');
