@@ -13,7 +13,7 @@
     "index": "Index",
     "back": "Back to top",
     "statusLabel": "Status",
-    "cv": ""
+    "cv": "View CV"
   },
   "header": {
     "name": "Utkarsh Tiwari",
@@ -36,7 +36,7 @@
       },
       {
         "label": "CV",
-        "href": "#cv"
+        "href": "/Utkarsh_Tiwari_CV.pdf"
       },
       {
         "label": "Contact",
@@ -332,6 +332,6 @@
     "socialHref": "https://www.linkedin.com/in/utkarsh-tiwari-45813728b/",
     "github": "GitHub",
     "githubHref": "https://github.com/Utkarsh4412",
-    "cvHref": ""
+    "cvHref": "/Utkarsh_Tiwari_CV.pdf"
   }
 }
