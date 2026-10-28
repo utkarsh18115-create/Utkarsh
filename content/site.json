@@ -209,10 +209,10 @@
         "status": "Research"
       },
       {
-        "name": "Paper in preparation",
+        "name": "Manuscript submitted",
         "label": "",
-        "description": "",
-        "status": "In preparation"
+        "description": "Submitted for peer review; decision pending.",
+        "status": "Research"
       }
     ]
   },
